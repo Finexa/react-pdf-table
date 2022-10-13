@@ -1,5 +1,6 @@
 import * as React from "react";
 import ReactPDF from "@react-pdf/renderer";
+import { Style } from "@react-pdf/typings";
 export interface TableBorder {
     includeTopBorder?: boolean;
     includeRightBorder?: boolean;
@@ -8,7 +9,7 @@ export interface TableBorder {
 }
 export interface TableCellProps extends TableBorder {
     weighting?: number;
-    style?: ReactPDF.Style | ReactPDF.Style[];
+    style?: Style | Style[];
     textAlign?: "left" | "center" | "right";
     isHeader?: boolean;
     fontSize?: number | string;
